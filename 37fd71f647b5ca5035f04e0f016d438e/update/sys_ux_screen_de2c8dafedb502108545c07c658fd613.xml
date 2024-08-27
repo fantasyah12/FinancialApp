@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_screen">
+    <sys_ux_screen action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <app_config display_value="Financial Workspace App Config">922c8daf57b50210bca2e5e6f852372a</app_config>
+        <description/>
+        <disable_auto_reflow>false</disable_auto_reflow>
+        <event_mappings/>
+        <macroponent display_value="Analytics center">88cfd0cec3302010ec37e0dd9740dde6</macroponent>
+        <macroponent_config/>
+        <name>Analytics Center Default</name>
+        <order>0</order>
+        <parent_macroponent display_value="Workspace App Shell">c276387cc331101080d6d3658940ddd2</parent_macroponent>
+        <required_translations>[ ]</required_translations>
+        <rollback_screen/>
+        <screen_condition/>
+        <screen_type display_value="Analytics Center">522c8daf76b50210c4bcbe74d0103415</screen_type>
+        <sys_class_name>sys_ux_screen</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-02 06:49:05</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>de2c8dafedb502108545c07c658fd613</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Analytics Center Default</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Financial App" source="x_24380_financia_0">37fd71f647b5ca5035f04e0f016d438e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial App">37fd71f647b5ca5035f04e0f016d438e</sys_scope>
+        <sys_update_name>sys_ux_screen_de2c8dafedb502108545c07c658fd613</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-02 06:49:05</sys_updated_on>
+    </sys_ux_screen>
+    <sys_translated_text action="delete_multiple" query="documentkey=de2c8dafedb502108545c07c658fd613"/>
+</record_update>

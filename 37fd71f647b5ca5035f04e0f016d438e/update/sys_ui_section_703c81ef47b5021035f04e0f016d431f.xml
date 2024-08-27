@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="Entity Contact" section_id="703c81ef47b5021035f04e0f016d431f" sys_domain="global" table="x_24380_financia_0_billing_profiles" version="3" view="workspace-financial-workspace-0">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>country_code</element>
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-05-02 06:49:14</sys_created_on>
+            <sys_id>b83c81ef47b5021035f04e0f016d432d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Entity Contact" display_value="Entity Contact" name="x_24380_financia_0_billing_profiles" sys_domain="global" view="122c8dafb5b50210df3548a4c722d320">703c81ef47b5021035f04e0f016d431f</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-05-02 06:49:14</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>personal_entity_address</element>
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-05-02 06:49:14</sys_created_on>
+            <sys_id>3c3c81ef47b5021035f04e0f016d432e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Entity Contact" display_value="Entity Contact" name="x_24380_financia_0_billing_profiles" sys_domain="global" view="122c8dafb5b50210df3548a4c722d320">703c81ef47b5021035f04e0f016d431f</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-05-02 06:49:14</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-05-02 06:49:14</sys_created_on>
+            <sys_id>303c81ef47b5021035f04e0f016d432e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Entity Contact" display_value="Entity Contact" name="x_24380_financia_0_billing_profiles" sys_domain="global" view="122c8dafb5b50210df3548a4c722d320">703c81ef47b5021035f04e0f016d431f</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-05-02 06:49:14</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>phone_number</element>
+            <position>3</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-05-02 06:49:14</sys_created_on>
+            <sys_id>b03c81ef47b5021035f04e0f016d432f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Entity Contact" display_value="Entity Contact" name="x_24380_financia_0_billing_profiles" sys_domain="global" view="122c8dafb5b50210df3548a4c722d320">703c81ef47b5021035f04e0f016d431f</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-05-02 06:49:14</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>email_address</element>
+            <position>4</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-05-02 06:49:14</sys_created_on>
+            <sys_id>b43c81ef47b5021035f04e0f016d432e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Entity Contact" display_value="Entity Contact" name="x_24380_financia_0_billing_profiles" sys_domain="global" view="122c8dafb5b50210df3548a4c722d320">703c81ef47b5021035f04e0f016d431f</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-05-02 06:49:14</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption>Entity Contact</caption>
+            <header>false</header>
+            <name>x_24380_financia_0_billing_profiles</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-05-02 06:49:14</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>703c81ef47b5021035f04e0f016d431f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_24380_financia_0_billing_profiles</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Financial App" source="x_24380_financia_0">37fd71f647b5ca5035f04e0f016d438e</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Financial App">37fd71f647b5ca5035f04e0f016d438e</sys_scope>
+            <sys_update_name>sys_ui_section_703c81ef47b5021035f04e0f016d431f</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-05-02 06:49:14</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Workspace Financial Workspace 0" name="workspace-financial-workspace-0">122c8dafb5b50210df3548a4c722d320</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="question_choice">
+    <question_choice action="INSERT_OR_UPDATE">
+        <inactive>false</inactive>
+        <order>100</order>
+        <published_ref/>
+        <question display_value="Customer Category">1d31a5634779021035f04e0f016d432d</question>
+        <sys_class_name>question_choice</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-02 08:58:17</sys_created_on>
+        <sys_id>e9c5a96b4779021035f04e0f016d43b8</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Retails</sys_name>
+        <sys_package display_value="Financial App" source="x_24380_financia_0">37fd71f647b5ca5035f04e0f016d438e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial App">37fd71f647b5ca5035f04e0f016d438e</sys_scope>
+        <sys_update_name>question_choice_e9c5a96b4779021035f04e0f016d43b8</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-02 08:59:19</sys_updated_on>
+        <text>Retails</text>
+        <value>retails</value>
+    </question_choice>
+    <fx_price action="delete_multiple" query="id=e9c5a96b4779021035f04e0f016d43b8"/>
+</record_update>

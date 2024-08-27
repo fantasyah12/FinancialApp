@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_app_config">
+    <sys_ux_app_config action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <custom_icon/>
+        <default_route_type/>
+        <description>Financial Workspace</description>
+        <disable_auto_reflow>false</disable_auto_reflow>
+        <encode_query_string>false</encode_query_string>
+        <icon/>
+        <landing_path>home</landing_path>
+        <name>Financial Workspace App Config</name>
+        <prefetch_limits/>
+        <sys_class_name>sys_ux_app_config</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-02 06:49:04</sys_created_on>
+        <sys_id>922c8daf57b50210bca2e5e6f852372a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Financial Workspace App Config</sys_name>
+        <sys_package display_value="Financial App" source="x_24380_financia_0">37fd71f647b5ca5035f04e0f016d438e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial App">37fd71f647b5ca5035f04e0f016d438e</sys_scope>
+        <sys_update_name>sys_ux_app_config_922c8daf57b50210bca2e5e6f852372a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-02 06:49:04</sys_updated_on>
+    </sys_ux_app_config>
+    <sys_translated_text action="delete_multiple" query="documentkey=922c8daf57b50210bca2e5e6f852372a"/>
+</record_update>

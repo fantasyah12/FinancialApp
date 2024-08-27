@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function($rootScope, $location) {
+	/* widget controller */
+	var c = this;
+	
+	$rootScope.$on('data_table.click', function(event,obj) {
+		console.log(obj);
+		var link = {};
+		link.sys_id = obj.sys_id;
+		link.table = obj.table;
+		link.id = c.data.page;
+		$location.search(link);
+	});
+};]]></client_script>
+        <controller_as>c</controller_as>
+        <css/>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>bill_list</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>Bill List</name>
+        <option_schema>[{"displayValue":"Page","name":"page","label":"Page","type":"reference","value":"sp_page","ed":{"reference":"sp_page"}}]</option_schema>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+
+    // data.f = {};
+    // data.table = $sp.getParameter("t") || $sp.getParameter("table") || options.table;
+    // data.sys_id = $sp.getParameter("sys_id") || options.sys_id;
+    // data.query = $sp.getParameter("query");
+
+    // if (!data.table || !data.sys_id)
+    //     return;
+
+    var f = $sp.getForm(data.table, data.sys_id, data.query);
+    data.billList = [{
+            id: 'out-paid-invoice',
+            table: 'x_24380_financia_0_invoices',
+            filter: 'status!=Paid',
+            view: 'sp',
+            label: 'Outstanding Invoice',
+            processPayment: true
+
+        },
+        {
+            id: 'paid-invoice',
+            table: 'x_24380_financia_0_invoices',
+            filter: 'status=Paid',
+            view: 'sp',
+            label: 'Paid Invoice',
+            processPayment: false
+        },
+        {
+            id: 'past-transaction',
+            table: 'x_24380_financia_0_transactions',
+            view: 'sp',
+            label: 'Past Transaction',
+            processPayment: false
+        }
+    ];
+
+    // for (var i in data.related_lists) {
+    //     var list = data.related_lists[i];
+    // 	gs.addInfoMessage(data.related_lists[i]);
+    //     var params = {
+    //         table: list.table,
+    //         filter: list.field + "=" + data.sys_id,
+    //         view: 'sp',
+    //         title: list.label
+    //     };
+
+    //     if (options.page) {
+    //         var page = new GlideRecord('sp_page');
+    //         if (page.get(options.page))
+    //             data.page = page.getDisplayValue('id');
+    //     }
+    //     if (!data.page) {
+    //         data.page = "form";
+    //     }
+
+    //     list.widget = $sp.getWidget('widget-data-table', params);
+    // }
+
+    for (var i in data.billList) {
+        var list = data.billList[i];
+        var params = {
+            table: list.table,
+            filter: list.filter,
+            view: 'sp',
+            title: list.label,
+			processPayment: list.processPayment
+        };
+
+
+        list.widget = $sp.getWidget('bill_data_table', params);
+    }
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-02 09:18:41</sys_created_on>
+        <sys_id>966e2d6747b9021035f04e0f016d43c7</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Bill List</sys_name>
+        <sys_package display_value="Financial App" source="x_24380_financia_0">37fd71f647b5ca5035f04e0f016d438e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial App">37fd71f647b5ca5035f04e0f016d438e</sys_scope>
+        <sys_update_name>sp_widget_966e2d6747b9021035f04e0f016d43c7</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-03 03:49:13</sys_updated_on>
+        <template><![CDATA[<div class="panel panel-default" ng-if="data.billList.length > 0">
+  <div class="panel-body">
+
+    <ul class="nav nav-tabs" role="tablist">
+      <li role="presentation" ng-class='{active:$first}' ng-repeat="list in data.billList">
+        <a data-target="#{{list.id}}" aria-controls="{{list.id}}" role="tab" ng-class='{active:$first}' data-toggle="tab">
+          {{list.label}}
+          <span class="label label-as-badge label-primary" ng-if="list.count">{{list.count}}</span>
+        </a>
+      </li>
+    </ul>
+
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane" id="{{list.id}}" ng-class='{active:$first}' ng-repeat="list in data.billList">
+
+        <div style="margin-top: -1px;">
+          <div class="alert alert-danger" ng-if="data.invalid_table">
+            Table not defined '{{data.table_label}}'
+          </div>
+          <sp-widget widget="list.widget"></sp-widget>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>]]></template>
+    </sp_widget>
+</record_update>

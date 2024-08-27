@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="db_image">
+    <db_image action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category>cms</category>
+        <format/>
+        <height/>
+        <image>923bd1a74739021035f04e0f016d4386</image>
+        <name>twitter.svg</name>
+        <size_bytes>586</size_bytes>
+        <sys_class_name>db_image</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-02 07:54:43</sys_created_on>
+        <sys_id>312b91a74739021035f04e0f016d434d</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>twitter.svg</sys_name>
+        <sys_package display_value="Financial App" source="x_24380_financia_0">37fd71f647b5ca5035f04e0f016d438e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial App">37fd71f647b5ca5035f04e0f016d438e</sys_scope>
+        <sys_update_name>db_image_312b91a74739021035f04e0f016d434d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-02 07:54:52</sys_updated_on>
+        <thumbnail/>
+        <width/>
+    </db_image>
+    <sys_attachment action="INSERT_OR_UPDATE">
+        <average_image_color/>
+        <chunk_size_bytes>700000</chunk_size_bytes>
+        <compressed>true</compressed>
+        <content_type>image/svg+xml</content_type>
+        <encryption_context/>
+        <file_name>image</file_name>
+        <hash>a88b396acae9c8f9f03f60cab282ec1ab38f661ec17aec9ff313c0f25ef0c233</hash>
+        <image_height/>
+        <image_width/>
+        <size_bytes>586</size_bytes>
+        <size_compressed>347</size_compressed>
+        <state>available</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-02 07:54:52</sys_created_on>
+        <sys_id>923bd1a74739021035f04e0f016d4386</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2024-05-02 07:54:52</sys_updated_on>
+        <table_name>ZZ_YYdb_image</table_name>
+        <table_sys_id>312b91a74739021035f04e0f016d434d</table_sys_id>
+    </sys_attachment>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>H4sIAAAAAAAA/w==</data>
+        <length>16</length>
+        <position>0</position>
+        <sys_attachment display_value="image" sys_id="923bd1a74739021035f04e0f016d4386">923bd1a74739021035f04e0f016d4386</sys_attachment>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-02 07:54:52</sys_created_on>
+        <sys_id>d23bd1a74739021035f04e0f016d4386</sys_id>
+    </sys_attachment_doc>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>XVLbboMwDH3vV1h5j8k9YSqV2J73EbRlJRIrHc1KP38OF6mahC3rxD7nyGZ/f1zg+d1f7xXrUrq9FcU0TThpHMZLoYQQBXUwmOI5dRWTjkHXxkuXlvor9n3FTr/j2F7Tx9API4NT39yJ7RjhGHmaYkotoY/YTu/Ds2ICBEhHHzvsAPa3JnVwrtinRaEItieHQgdqKlEbyQkWeq0pa/NDgOKopORUOY5GqdqhhxwCVnqN1qjmFZZcYgglWhnoVc+xtqMxPr/K3G3nWCYUiuDRl7rWqEJmzXmZ8hh87hW6IV8K5rSMkaTzXJOzMo+saRMTZMCgDqp+tSEBncnS3j5QGNv8H1ToSICA2f9crXIYnEUpLRDbBjlpaD3Wz5aXtNBoFM4TmfKetuYgx6rvA0jaW2gI3Xh84NlNnQ8wX2Gl2a7FisNun3+Rwx8fnSWMSgIAAA==</data>
+        <length>452</length>
+        <position>1</position>
+        <sys_attachment display_value="image" sys_id="923bd1a74739021035f04e0f016d4386">923bd1a74739021035f04e0f016d4386</sys_attachment>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-02 07:54:52</sys_created_on>
+        <sys_id>563bd1a74739021035f04e0f016d4386</sys_id>
+    </sys_attachment_doc>
+</record_update>

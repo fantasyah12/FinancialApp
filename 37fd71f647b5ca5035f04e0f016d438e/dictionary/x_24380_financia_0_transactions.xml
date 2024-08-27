@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="a7fd80274771021035f04e0f016d4346" label="Transactions" max_length="40" name="x_24380_financia_0_transactions" text_index="true" type="collection">
+        <element label="Billing Profile" max_length="32" name="billing_profile" reference="x_24380_financia_0_billing_profiles" type="reference"/>
+        <element label="Amount" max_length="38" name="amount" type="currency"/>
+        <element label="Tax Inv  &amp; Receipt" max_length="42" name="tax_inv_receipt" type="file_attachment"/>
+        <element label="Payment Description" max_length="4000" name="payment_description" type="string"/>
+        <element label="Date of Payment" max_length="42" name="date_of_payment" type="glide_date"/>
+        <element choice="3" label="Status" max_length="42" name="status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Paid" sequence="0" value="Paid"/>
+                <element inactive_on_update="false" label="Not Paid" sequence="1" value="Not Paid"/>
+            </choice>
+        </element>
+        <element default="javascript:getNextObjNumberPadded();" display="true" dynamic_default_value="fdcb83a85f220100a9ad2572f2b4773c" label="Transaction ID" max_length="255" name="transaction_id" type="string" use_dynamic_default="true"/>
+        <index name="index">
+            <element name="billing_profile"/>
+        </index>
+    </element>
+</database>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="5efe393a47b5ca5035f04e0f016d4342" label="Billing Profiles" max_length="40" name="x_24380_financia_0_billing_profiles" text_index="true" type="collection">
+        <element label="Link eDDA Setup" max_length="40" name="link_edda_setup" type="boolean"/>
+        <element label="Personal/Entity Address" max_length="4000" name="personal_entity_address" type="string"/>
+        <element label="Entity Type" max_length="40" name="entity_type" type="string"/>
+        <element label="Email Address" max_length="40" name="email_address" type="string"/>
+        <element label="Phone number" max_length="40" name="phone_number" type="string"/>
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element label="Entity Status" max_length="40" name="entity_status" type="string"/>
+        <element label="Country Code" max_length="40" name="country_code" type="string"/>
+        <element display="true" label="Profile Name" max_length="40" name="profile_name" type="string"/>
+        <element choice="1" label="Customer Category" max_length="40" name="customer_category" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Retails" sequence="0" value="retails"/>
+                <element inactive_on_update="false" label="Telecom" sequence="1" value="telecom"/>
+            </choice>
+        </element>
+        <element choice="1" label="Sub Business Unit" max_length="40" name="sub_business_unit" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Sub Business Unit 2" sequence="1" value="sub_business_unit_2"/>
+                <element inactive_on_update="false" label="Sub Business Unit 1" sequence="0" value="sub_business_unit_1"/>
+            </choice>
+        </element>
+        <element label="UEN/NRIC/FIN" max_length="40" name="uen_nric_fin" type="string"/>
+        <element label="Description" max_length="4000" name="description" type="string"/>
+    </element>
+</database>

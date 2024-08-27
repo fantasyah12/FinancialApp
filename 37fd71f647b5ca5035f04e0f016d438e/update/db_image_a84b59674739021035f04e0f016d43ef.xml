@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="db_image">
+    <db_image action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category>cms</category>
+        <format/>
+        <height/>
+        <image>5b5b19a74739021035f04e0f016d4386</image>
+        <name>facebook.svg</name>
+        <size_bytes>435</size_bytes>
+        <sys_class_name>db_image</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-02 07:55:15</sys_created_on>
+        <sys_id>a84b59674739021035f04e0f016d43ef</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>facebook.svg</sys_name>
+        <sys_package display_value="Financial App" source="x_24380_financia_0">37fd71f647b5ca5035f04e0f016d438e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial App">37fd71f647b5ca5035f04e0f016d438e</sys_scope>
+        <sys_update_name>db_image_a84b59674739021035f04e0f016d43ef</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-02 07:55:29</sys_updated_on>
+        <thumbnail/>
+        <width/>
+    </db_image>
+    <sys_attachment action="INSERT_OR_UPDATE">
+        <average_image_color/>
+        <chunk_size_bytes>700000</chunk_size_bytes>
+        <compressed>true</compressed>
+        <content_type>image/svg+xml</content_type>
+        <encryption_context/>
+        <file_name>image</file_name>
+        <hash>fccefddbce24b7acef96fcdb75aa9bc37dc1d6e725efa8b32eca6b619ff153ff</hash>
+        <image_height/>
+        <image_width/>
+        <size_bytes>435</size_bytes>
+        <size_compressed>314</size_compressed>
+        <state>available</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-02 07:55:29</sys_created_on>
+        <sys_id>5b5b19a74739021035f04e0f016d4386</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2024-05-02 07:55:29</sys_updated_on>
+        <table_name>ZZ_YYdb_image</table_name>
+        <table_sys_id>a84b59674739021035f04e0f016d43ef</table_sys_id>
+    </sys_attachment>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>H4sIAAAAAAAA/w==</data>
+        <length>16</length>
+        <position>0</position>
+        <sys_attachment display_value="image" sys_id="5b5b19a74739021035f04e0f016d4386">5b5b19a74739021035f04e0f016d4386</sys_attachment>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-02 07:55:29</sys_created_on>
+        <sys_id>9b5b19a74739021035f04e0f016d4386</sys_id>
+    </sys_attachment_doc>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>RZFPb8IwDMXvfAor97iO86+ZKIdx4bIrdygdqdZRVLqWjz+XTpoUKT89P9svyvYxXeH53d0elcrjeH8rinmecbbYD9eCiagQh4K5vYy5UiYoyE17zePKn23XVar+GYbmNu77rh8U1N3pIdPOLZxb/Xmqm3PffymY2mZ+75+VIiAwQY7abQC299OY4VKpD9FKJJdq0g6dC9qiL1mL5nX5uvaLAqSRiMFiILviUqsJHJKJwJg4QETrIgSMXjB5M2mPgX3WjGSPS8NhKR4DcpTeRZZegyZ52WuskfnEvDKWMSyhMSZx+PhPk8FUZm0kRqo1pmQlnkFLko7NSuJmX4rTm8zIpuw0Wu8kqOVwSFI8mlBbLNlpeZN7pZbFyf7h6wGq2G22y1/sfgExbfQvswEAAA==</data>
+        <length>408</length>
+        <position>1</position>
+        <sys_attachment display_value="image" sys_id="5b5b19a74739021035f04e0f016d4386">5b5b19a74739021035f04e0f016d4386</sys_attachment>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-02 07:55:29</sys_created_on>
+        <sys_id>1f5b19a74739021035f04e0f016d4386</sys_id>
+    </sys_attachment_doc>
+</record_update>

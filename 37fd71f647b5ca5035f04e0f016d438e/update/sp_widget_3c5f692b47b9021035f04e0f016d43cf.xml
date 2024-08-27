@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller = function () {
+    /* widget controller */ var c = this;
+    $('.modal-backdrop').remove();
+};
+]]></client_script>
+        <controller_as>c</controller_as>
+        <css>/* Custom button styling */
+.btn-danger {
+  background-color: #e63634;
+  border: none;
+  width: 100%;
+  height: 50px;
+  /* Adjust as needed */
+  border-radius: 0;
+  /* Square edges */
+}
+.mt-5 {
+  margin-top: 3rem !important;
+}
+/* Reset custom styles to ensure consistency */
+* {
+  box-sizing: border-box;
+}
+
+/* Style for the table container */
+.table-responsive {
+  margin-top: 1rem;
+  background: #FFF;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  /* Shadow for the entire table container */
+}
+
+/* Style for table headers */
+.table thead th {
+  background-color: #e9ecef;
+  /* Light gray background */
+  color: #495057;
+  /* Darker text color */
+  border-bottom: 2px solid #dee2e6;
+  /* Solid border for the bottom of the header cells */
+}
+
+/* Style for table rows */
+.table tbody tr {
+  border-bottom: 1px solid #dee2e6;
+  /* Light border for each row */
+}
+
+/* Style for the 'Paid' status badge */
+.badge.bg-success {
+  background-color: #28a745;
+  /* Green background for 'Paid' status */
+  border-radius: 0.25rem;
+  font-size: 0.9rem;
+  padding: 0.25rem 0.6rem;
+}
+
+/* Ensuring the badge is aligned properly */
+.table tbody tr td {
+  vertical-align: middle;
+  /* Align the text vertically in the middle */
+}
+
+/* Header styling */
+h2.mb-3 {
+  color: #495057;
+  /* Color for the 'Paid Items' header */
+}
+
+/* Styles for the cells to increase readability */
+.table td {
+  padding: 0.75rem;
+  /* Padding inside cells */
+}
+
+/* Ensuring the table fills out its container nicely */
+.table {
+  width: 100%;
+  /* Ensure the table stretches to the width of its container */
+  margin-bottom: 0;
+  /* Remove bottom margin from the table */
+}
+
+
+/* Style for the main heading */
+h2.text-center {
+  border-bottom: 2px dashed #dc3545;
+  /* Red dashed border for heading underline */
+  padding-bottom: 1rem;
+  color: #dc3545;
+  /* Color of the heading text to match the dashed line */
+  margin-bottom: 2rem;
+  /* Space below the heading */
+}
+
+/* Style for the card-like containers */
+.border-rounded {
+  border: 2px solid #dc3545;
+  /* Red border for boxes */
+  border-radius: 0.5rem;
+  /* Rounded corners as per the image */
+  margin-bottom: 1rem;
+  /* Space between the cards */
+  padding: 1rem;
+}
+
+/* Style for the subheadings */
+h4 {
+  color: #dc3545;
+  /* Color of subheading text to match the theme */
+  margin-bottom: 1rem;
+  /* Space below the subheading */
+}
+
+/* Dashed border for the list items */
+.dashed-border-bottom {
+  border-bottom: 1px dashed #dc3545;
+  /* Dashed border for items */
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Style for file info and actions container */
+.file-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Style for the file details (icon and filename) */
+.file-details {
+  display: flex;
+  align-items: center;
+}
+
+/* Custom icon styling */
+.file-icon {
+  background: url('path-to-your-icon.png') no-repeat center center;
+  /* Path to your PDF icon */
+  display: inline-block;
+  width: 24px;
+  /* Adjust size as needed */
+  height: 24px;
+  /* Adjust size as needed */
+  margin-right: 0.5rem;
+}
+
+/* Custom styles for action buttons */
+.action-buttons button {
+  color: #dc3545;
+  /* Text color for buttons */
+  background-color: transparent;
+  /* Transparent background for buttons */
+  border: none;
+  /* No border for buttons */
+  padding: 0.5rem 1rem;
+  /* Padding around text for buttons */
+  margin-right: 0.5rem;
+  /* Space between buttons */
+  cursor: pointer;
+}
+
+.action-buttons button:hover {
+  text-decoration: underline;
+  /* Underline on hover for better UX */
+}
+
+.border-wrapper {
+  border: 1px solid #dc3545;
+  border-radius: 20px;
+}
+
+.dashed-border-bottom {
+  border-bottom: 2px dashed #dc3545;
+  padding: 1rem;
+}
+
+.dashed-border-right {
+  border-right: 2px dashed #dc3545;
+  padding-right: 20px;
+  min-height: 300px;
+}
+
+.collapse-header {
+  font-size: 1.25rem;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.collapse-header svg {
+  margin-right: 0.5rem;
+}
+
+.file-item:not(:last-child) {
+  border-bottom: 2px dashed #dc3545;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.file-detail {
+  display: flex;
+  align-items: center;
+  background-color: #dee2e6;
+  padding: 10px;
+  width: 50%;
+  border-radius: 8px;
+}
+
+.file-icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-right: 0.5rem;
+  background: url('data:image/svg+xml,&lt;svg xmlns="http://www.w3.org/2000/svg" fill="%23000" viewBox="0 0 16 16"&gt;&lt;path d="M.5 1.5A1.5 1.5 0 011 0h7.5l5 5v9.5a1.5 1.5 0 01-1.5 1.5H1a1.5 1.5 0 01-1.5-1.5V1.5zm1 0v13A.5.5 0 002 15h12a.5.5 0 00.5-.5V6h-4a1 1 0 01-1-1V1H1.5a.5.5 0 00-.5.5zm7 0v4a1 1 0 001 1h4V6h-4V1.5z"/&gt;&lt;/svg&gt;') no-repeat center center;
+  background-size: 100%;
+}
+
+.file-size {
+  color: #6c757d;
+  font-size: 0.875em;
+}
+
+.file-actions button {
+  margin-left: 0.5rem;
+}
+
+.btn-sm {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  border-radius: 0.2rem;
+}
+
+/* FOOTER */
+.footer {
+  background-color: #FFFFFF;
+  color: black;
+  
+}
+
+.footer .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: 2px solid #E2322F;
+  padding: 34px 0;
+}
+
+.footer .container h3 {
+  margin-bottom: 34px;
+  margin-left: 50px;
+}
+
+.footer hr {
+  border-top: 1px solid #707070;
+  width: 100%;
+  margin: 0;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 18px 0;
+  width: 100%;
+}
+
+.footer-links li {
+  padding: 0 12px;
+}
+
+.footer-links a {
+  color: black;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #495057;
+}
+
+
+.social-icons {
+  font-size: 20px;
+  margin-right: 68px;
+  border-left: 1px solid #707070;
+  /* To match the space between Contact us and Feedback */
+}
+
+.justify-content-end {
+  justify-content: flex-end !important;
+}
+
+.border-left {
+  border-left: 1px solid #707070;
+}
+
+.container .mt-5 .p-4 .border-wrapper .mb-5 {
+  border: 1px solid #dc3545;
+  border-radius: 20px;
+  padding: 1.5rem !important;
+  margin-bottom: 3rem !important;
+  margin-top: 3rem !important;
+}
+
+.social-icons a {
+  color: black;
+  margin: 0 20px;
+}
+
+.copy-text {
+  font-size: 14px;
+  text-align: center;
+  width: 100%;
+  margin-top: 15px;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>details_receipt</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>Details Receipt</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function () {
+    /* populate the 'data' object */ /* e.g., data.table = $sp.getValue('table'); */
+    data.selectItem = $sp.getParameter('selectItem');
+    var listID = {};
+    var desc = '';
+    if (data.selectItem) {
+        listID = data.selectItem.split(',');
+        desc = listID.slice(-1).toString();
+    } else {
+        listID = ['Paid'];
+        desc = listID.toString();
+    }
+    // Sum payment amount
+    var sum = new global.GlideQuery('x_24380_financia_0_invoices')
+        .where('sys_id', 'IN', listID)
+        .sum('amount')
+        .orElse(0);
+    //Convert to Dollar
+    var currencyCode = 'USD';
+    var formatString = '%s%v';
+    var exchangeValue = new sn_currency.GlideCurrencyFormatter(formatString);
+    data.sum = exchangeValue.setMaxFractionDigits(2).format(sum, currencyCode);
+    //Create an array to populate with invoices
+    data.payments = [];
+    var paymentGR = new GlideRecord('x_24380_financia_0_invoices');
+    paymentGR.addQuery('sys_id', 'IN', listID);
+    paymentGR.query();
+    while (paymentGR.next()) {
+        //*******************Update Data Server side************************ */
+
+        // Initialize Transaction ID
+        var tranID = new GlideRecord('x_24380_financia_0_transactions');
+        tranID.initialize();
+        tranID.status = paymentGR.getDisplayValue('status');
+        tranID.amount = sum;
+        tranID.payment_description = desc;
+        tranID.billing_profile = '28602caf47b1021035f04e0f016d43d0';
+        tranID.date_of_payment = paymentGR.getDisplayValue('date_of_invoice');
+        var gr = new GlideRecord('sys_attachment');
+        if (gr.get('faff4eff47f1821035f04e0f016d43dc')) {
+            tranID.tax_inv_receipt = 'faff4eff47f1821035f04e0f016d43dc';
+        }
+        tranID.insert();
+        //Update Invoice table afer create transaction
+        paymentGR.setValue('transaction', tranID.sys_id);
+        paymentGR.update();
+
+        //*******************Fetching Client side************************ */
+        //use service portal helper method to get some display values Payment item
+        var paymentObj = {};
+        $sp.getRecordDisplayValues(
+            paymentObj,
+            paymentGR,
+            'e_service_name,entities,application_no,number,date_of_invoice,amount,status'
+        );
+        //get value from fields in table Invoices.
+        paymentObj.e_service_name = paymentGR.getDisplayValue('e_service_name');
+        paymentObj.entities = paymentGR.getDisplayValue('entities');
+        paymentObj.application_no = paymentGR.getDisplayValue('application_no');
+        paymentObj.number = paymentGR.getDisplayValue('number');
+        paymentObj.date_of_invoice =
+            paymentGR.getDisplayValue('date_of_invoice');
+        paymentObj.amount = paymentGR.getDisplayValue('amount');
+        paymentObj.status = paymentGR.getDisplayValue('status');
+        //push the populated obj into the array
+        data.payments.push(paymentObj);
+        //Create an array to populate with Transaction
+        data.transaction = [];
+        var tranGR = new GlideRecord('x_24380_financia_0_transactions');
+        tranGR.addQuery('sys_id', tranID.sys_id);
+        tranGR.query();
+        if (tranGR.next()) {
+            //use service portal helper method to get some display values
+            var transactionObj = {};
+            $sp.getRecordDisplayValues(
+                transactionObj,
+                tranGR,
+                'tran_id,description,date_of_payment,amount,status,tax_inv_receipt'
+            );
+            //get value from fields in table Transaction.
+            transactionObj.tran_id = tranID.getDisplayValue('transaction_id');
+            transactionObj.description = tranID.getDisplayValue(
+                'payment_description'
+            );
+            transactionObj.date_of_payment =
+                tranID.getDisplayValue('date_of_payment');
+            transactionObj.amount = tranID.getDisplayValue('amount');
+            transactionObj.status = tranID.getDisplayValue('status');
+            transactionObj.tax_inv_receipt =
+                tranID.getDisplayValue('tax_inv_receipt');
+            //push the populated obj into the array
+            data.transaction.push(transactionObj);
+        }
+    }
+})();
+]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-02 09:22:41</sys_created_on>
+        <sys_id>3c5f692b47b9021035f04e0f016d43cf</sys_id>
+        <sys_mod_count>24</sys_mod_count>
+        <sys_name>Details Receipt</sys_name>
+        <sys_package display_value="Financial App" source="x_24380_financia_0">37fd71f647b5ca5035f04e0f016d438e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial App">37fd71f647b5ca5035f04e0f016d438e</sys_scope>
+        <sys_update_name>sp_widget_3c5f692b47b9021035f04e0f016d43cf</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-09 07:36:13</sys_updated_on>
+        <template><![CDATA[<div class="container mt-5">
+    <div class="mb-3">
+        <button class="btn btn-danger">Tax Invoice & Receipt</button>
+    </div>
+
+    <table class="table">
+        <thead>
+            <tr class="table-dark">
+                <th scope="col">Transaction ID</th>
+                <th scope="col">Payment Description</th>
+                <th scope="col">Entities</th>
+                <th scope="col">Date of Payment</th>
+                <th scope="col">Amount</th>
+                <th scope="col">Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="table-row" ng-repeat="transaction in data.transaction">
+                <td data-label="Transaction ID">{{transaction.tran_id}}</td>
+                <td data-label="Payment Description">{{transaction.description}}</td>
+                <td data-label="Entities">BCA</td>
+                <td data-label="Date of Payment">{{transaction.date_of_payment}}</td>
+                <td data-label="Amount">{{transaction.amount}}</td>
+                <td data-label="Status">{{transaction.status}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="container my-5">
+    <h2 class="mb-3">Paid Items</h2>
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">e-Service Name</th>
+                    <th scope="col">Entities</th>
+                    <th scope="col">Application No.</th>
+                    <th scope="col">Proforma Invoice No.</th>
+                    <th scope="col">Date of Invoice</th>
+                    <th scope="col">Amount</th>
+                    <th scope="col">Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="table-row" ng-repeat="payment in data.payments">
+                    <td data-label="e-Service Name">{{payment.e_service_name}}</td>
+                    <td data-label="Entities">{{payment.entities}}</td>
+                    <td data-label="Application No.">{{payment.application_no}}</td>
+                    <td data-label="Proforma Invoice No.">{{payment.number}}</td>
+                    <td data-label="Date of Invoice">{{payment.date_of_invoice}}</td>
+                    <td data-label="Amount">{{payment.amount}}</td>
+                    <td data-label="Status">{{payment.status}}</td>
+                </tr>
+                <!-- Repeat for other rows as needed -->
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+
+
+<div class="container mt-5 p-4 border-wrapper mb-5 ">
+    <h2 class="pb-3 mb-4 dashed-border-bottom">Tax Invoice & Receipt</h2>
+    <div class="row">
+        <div class="col-6">
+            <!-- Receipts -->
+            <div class="collapse-header" data-bs-toggle="collapse" data-bs-target="#receiptsCollapse">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-chevron-down" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M1.646 4.646a.5.5 0 011 0L8 10.293l5.354-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" />
+                </svg>
+                Receipt
+            </div>
+            <div id="receiptsCollapse" class="collapse show">
+                <div class="file-item d-flex justify-content-between align-items-center"
+                    ng-repeat="transaction in data.transaction">
+                    <div class="file-detail">
+                        <div class="file-icon"></div>
+                        <div>
+                            <span>{{transaction.tax_inv_receipt}}</span><br>
+                            <span class="file-size">4.8 MB</span>
+                        </div>
+                    </div>
+                    <div class="file-actions">
+                        <button class="btn btn-outline-primary btn-sm"
+                            onclick="previewFile('TaxInvoice_042032.pdf')">Preview</button>
+                        <button class="btn btn-outline-primary btn-sm"
+                            onclick="downloadFile('TaxInvoice_042032.pdf')">Download</button>
+                        <button class="btn btn-outline-primary btn-sm"
+                            onclick="printFile('TaxInvoice_042032.pdf')">Print</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>]]></template>
+    </sp_widget>
+</record_update>

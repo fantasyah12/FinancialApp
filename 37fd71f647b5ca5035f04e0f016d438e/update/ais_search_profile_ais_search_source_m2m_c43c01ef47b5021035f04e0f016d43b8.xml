@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="ais_search_profile_ais_search_source_m2m">
+    <ais_search_profile_ais_search_source_m2m action="INSERT_OR_UPDATE">
+        <profile display_value="financial-workspace Search Profile">5a2c8dafecb502102c09c01254c7ad29</profile>
+        <search_source display_value="Billing Profiles">c83c01ef47b5021035f04e0f016d43a8</search_source>
+        <sys_class_name>ais_search_profile_ais_search_source_m2m</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-02 06:49:10</sys_created_on>
+        <sys_id>c43c01ef47b5021035f04e0f016d43b8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>financial-workspace Search Profile.Billing Profiles</sys_name>
+        <sys_package display_value="Financial App" source="x_24380_financia_0">37fd71f647b5ca5035f04e0f016d438e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial App">37fd71f647b5ca5035f04e0f016d438e</sys_scope>
+        <sys_update_name>ais_search_profile_ais_search_source_m2m_c43c01ef47b5021035f04e0f016d43b8</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-02 06:49:10</sys_updated_on>
+    </ais_search_profile_ais_search_source_m2m>
+</record_update>

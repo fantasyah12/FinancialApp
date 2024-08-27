@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="db_image">
+    <db_image action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category>cms</category>
+        <format/>
+        <height/>
+        <image>d9ea59674739021035f04e0f016d4370</image>
+        <name>youtube.svg</name>
+        <size_bytes>893</size_bytes>
+        <sys_class_name>db_image</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-02 07:53:05</sys_created_on>
+        <sys_id>6baa95674739021035f04e0f016d43f6</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>youtube.svg</sys_name>
+        <sys_package display_value="Financial App" source="x_24380_financia_0">37fd71f647b5ca5035f04e0f016d438e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial App">37fd71f647b5ca5035f04e0f016d438e</sys_scope>
+        <sys_update_name>db_image_6baa95674739021035f04e0f016d43f6</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-02 07:53:26</sys_updated_on>
+        <thumbnail/>
+        <width/>
+    </db_image>
+    <sys_attachment action="INSERT_OR_UPDATE">
+        <average_image_color/>
+        <chunk_size_bytes>700000</chunk_size_bytes>
+        <compressed>true</compressed>
+        <content_type>image/svg+xml</content_type>
+        <encryption_context/>
+        <file_name>image</file_name>
+        <hash>c0b162de4d7b47a90a67b518d7890a94b65d8eefab11a05cb8d68ac7505d891f</hash>
+        <image_height/>
+        <image_width/>
+        <size_bytes>893</size_bytes>
+        <size_compressed>507</size_compressed>
+        <state>available</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-02 07:53:26</sys_created_on>
+        <sys_id>d9ea59674739021035f04e0f016d4370</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2024-05-02 07:53:26</sys_updated_on>
+        <table_name>ZZ_YYdb_image</table_name>
+        <table_sys_id>6baa95674739021035f04e0f016d43f6</table_sys_id>
+    </sys_attachment>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>H4sIAAAAAAAA/w==</data>
+        <length>16</length>
+        <position>0</position>
+        <sys_attachment display_value="image" sys_id="d9ea59674739021035f04e0f016d4370">d9ea59674739021035f04e0f016d4370</sys_attachment>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-02 07:53:26</sys_created_on>
+        <sys_id>1dea59674739021035f04e0f016d4370</sys_id>
+    </sys_attachment_doc>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>bVPbbtswDH3vVwh6F0PqSg1JgG6v60ckbhYb8JoiceKuXz9ScbdhKBAIJxJ5eHhIry+3o3n7Ob5cNrafptcvq9U8zzAHOJ2PK4+IK4mwZh6ep35jKVvTH4ZjP93xj2EcN7a7ns+Hl+nbaTydrenG3UXY9oPZD+7X6Tpd9wdrbsNh/np621g0aCjLz24fjFm/7qbePG/sEwMmMgS11h6QawfsPSAGE6FyAQzBZCCCENJOHsi0o9FJWqSkp++AUGIYqHhgDuC93qMfJVreIqDQ+izMrH87wJygktyXIJFFKpWoOlK5CUydk1DJrNFpPeVgQey1fh7dQpQU1MYoKEEq3gF5ZSLJ9EHlpcT/S3f/SBdMGQJ5J/m5SqfRScusLffCpiEQsBqUyMRFS2bnoXqFyYsYWi5FYENRr0hR+YtaIYWxSjZlffIsMCeVmj/X2M4qCkhzo1YilrYr59afa/19B9FXZXZ3Z5w68hjIhI9RoSmQ+aYlg5iPYpOnJLWEKckS5Oh0CjwumjHoErT+/hDqDF0bIrlliFFeEskAqEo+eh28a4P/fFncfVmi2kQ6+BS1dw1cXBgXM4uuUnNVTFVnRdGHk4+Ewoi4MBfgxMa/P2WIJoHHeovAxGMESkUMjsjvdrV9WOtXtf0NnkB6gH0DAAA=</data>
+        <length>664</length>
+        <position>1</position>
+        <sys_attachment display_value="image" sys_id="d9ea59674739021035f04e0f016d4370">d9ea59674739021035f04e0f016d4370</sys_attachment>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-02 07:53:26</sys_created_on>
+        <sys_id>9dea59674739021035f04e0f016d4370</sys_id>
+    </sys_attachment_doc>
+</record_update>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function() {  /* widget controller */  var c = this;};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>/* BANNER */
+.banner-bar {
+    background: linear-gradient(9.69deg, #E2322F 40.15%, rgba(206, 146, 76, 0.12) 107.72%), #F4333D;
+    color: white;
+}
+.banner-bar .welcome-text {
+    margin-top: 7px;
+    padding: 48px 0px;
+    width: 100%;
+    background-image: url(/path.svg);
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: auto;
+    height: 169px;
+}
+
+.modal-header .close{
+	display: none;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>financial_banner</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>Financial Banner</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {  /* populate the 'data' object */  /* e.g., data.table = $sp.getValue('table'); */})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-02 09:15:22</sys_created_on>
+        <sys_id>31ada12747b9021035f04e0f016d4388</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Financial Banner</sys_name>
+        <sys_package display_value="Financial App" source="x_24380_financia_0">37fd71f647b5ca5035f04e0f016d438e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial App">37fd71f647b5ca5035f04e0f016d438e</sys_scope>
+        <sys_update_name>sp_widget_31ada12747b9021035f04e0f016d4388</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-02 15:27:38</sys_updated_on>
+        <template><![CDATA[<div class="banner-bar">
+  <div class="container d-flex flex-row justify-content-between align-items-end">
+    <div class="welcome-text">
+      <h2 class="text-left">Welcome, {{::user.name}}</h2>
+      <p class="text-left">Now it’s easier with CEG for all consolidated payments.</p>
+    </div>
+  </div>
+</div>
+<!-- END HEADER -->]]></template>
+    </sp_widget>
+</record_update>

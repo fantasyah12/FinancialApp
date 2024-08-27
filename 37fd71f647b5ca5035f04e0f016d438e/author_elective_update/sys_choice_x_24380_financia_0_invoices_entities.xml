@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="entities" table="x_24380_financia_0_invoices" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>entities</element>
+            <name>x_24380_financia_0_invoices</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-05-02 04:19:50</sys_created_on>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>entities</sys_name>
+            <sys_package display_value="Financial App" source="x_24380_financia_0">37fd71f647b5ca5035f04e0f016d438e</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Financial App">37fd71f647b5ca5035f04e0f016d438e</sys_scope>
+            <sys_update_name>sys_choice_x_24380_financia_0_invoices_entities</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-05-02 04:19:50</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>entities</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>BCA</label>
+            <language>en</language>
+            <name>x_24380_financia_0_invoices</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-05-02 04:20:13</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-05-02 04:20:13</sys_updated_on>
+            <value>BCA</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>entities</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>PEB</label>
+            <language>en</language>
+            <name>x_24380_financia_0_invoices</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-05-02 04:19:50</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-05-02 04:19:50</sys_updated_on>
+            <value>PEB</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

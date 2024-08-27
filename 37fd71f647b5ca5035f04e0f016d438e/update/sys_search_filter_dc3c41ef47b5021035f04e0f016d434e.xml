@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_search_filter">
+    <sys_search_filter action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <ais_search_source display_value="Transactions">403c41ef47b5021035f04e0f016d4324</ais_search_source>
+        <label>Transactions</label>
+        <name>Transactions</name>
+        <order>300</order>
+        <search_context_config display_value="Financial Workspace AI Search Configuration">962c8daf71b5021043741d6d4cc4af20</search_context_config>
+        <sys_class_name>sys_search_filter</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-02 06:49:11</sys_created_on>
+        <sys_id>dc3c41ef47b5021035f04e0f016d434e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Transactions</sys_name>
+        <sys_package display_value="Financial App" source="x_24380_financia_0">37fd71f647b5ca5035f04e0f016d438e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial App">37fd71f647b5ca5035f04e0f016d438e</sys_scope>
+        <sys_update_name>sys_search_filter_dc3c41ef47b5021035f04e0f016d434e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-02 06:49:11</sys_updated_on>
+    </sys_search_filter>
+</record_update>

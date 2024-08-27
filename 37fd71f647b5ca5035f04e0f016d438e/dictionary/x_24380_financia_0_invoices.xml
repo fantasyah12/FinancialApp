@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="6af4c67247f5ca5035f04e0f016d4363" label="Invoices" max_length="40" name="x_24380_financia_0_invoices" text_index="true" type="collection">
+        <element label="Application No." max_length="40" name="application_no" type="string"/>
+        <element choice="3" label="Entities" max_length="40" name="entities" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="PEB" value="PEB"/>
+                <element inactive_on_update="false" label="BCA" value="BCA"/>
+            </choice>
+        </element>
+        <element label="Date of Invoice" max_length="40" name="date_of_invoice" type="glide_date"/>
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Proforma Invoice No." max_length="40" name="number" type="string"/>
+        <element choice="3" label="Status" max_length="40" name="status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Payment Failed" sequence="3" value="Payment failed"/>
+                <element inactive_on_update="false" label="Pending" sequence="0" value="Pending"/>
+                <element inactive_on_update="false" label="Processing" sequence="1" value="Processing"/>
+                <element inactive_on_update="false" label="Paid" sequence="2" value="Paid"/>
+            </choice>
+        </element>
+        <element label="e-Service Name" max_length="100" name="e_service_name" type="string"/>
+        <element label="Amount" max_length="20" name="amount" type="currency"/>
+        <element label="Transaction" max_length="32" name="transaction" reference="x_24380_financia_0_transactions" type="reference"/>
+        <index name="index">
+            <element name="transaction"/>
+        </index>
+    </element>
+</database>

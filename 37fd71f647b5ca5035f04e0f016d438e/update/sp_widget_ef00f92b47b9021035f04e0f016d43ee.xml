@@ -1,0 +1,670 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller = function ($rootScope, $scope, $location) {
+    /* widget controller */
+    var c = this;
+    // Get Description in text box
+    //var paymentForm = document.getElementById('paymentForm');
+    //var payButton = document.getElementById('payButton');
+    //var paymentDescription = document.getElementById('paymentDescription').value;
+    // console.log('Pay Form: ', + paymentForm);
+    // console.log('Pay Button: ', + payButton);
+    // console.log('Pay Description: ', + paymentDescription);
+    // Get sys_id from Server side
+    c.server.update(); //overwrites the data object with new updated contents
+    var desVal = '';
+    //Direct to Details Receipt
+    c.action = function () {
+        desVal = document.getElementById('paymentDescription').value;
+        console.log('Value input: ' + desVal); //Test value input
+        var paymentMethod = $('input[name="paymentMethod"]:checked').attr(
+            'value'
+        );
+        $('#exampleModalCenter').modal('show');
+        if (paymentMethod == 'payNow') {
+            $('#exampleModalLongTitle').html('Pay by QR Code');
+            $('#paycredit').hide();
+            $('#payqr').show();
+        } else {
+            $('#exampleModalLongTitle').html('Pay by Credit card');
+            $('#paycredit').show();
+            $('#payqr').hide();
+        }
+
+        //alert('123');
+        // Get the value of the selected payment method
+        // var paymentMethod = paymentForm.querySelector('input[name="paymentMethod"]:checked');
+        // console.log('Pay Method: ', + paymentMethod);
+        // // Check if a payment method was selected
+        // if (!paymentMethod) {
+        //     alert('Please select a payment method.');
+        //     return;
+        // }
+
+        // // Check if the payment description is not empty
+        // if (!paymentDescription.trim()) {
+        //     alert('Please enter a payment description.');
+        //     return;
+        // }
+        // // All checks passed, proceed with the payment process
+        // alert('Proceeding with payment...');
+        // // Here you would typically handle the actual payment process
+        //$location.search('id=details_receipt&selectItem=' + c.data.selectItem);
+    };
+
+    $('#pay-cedit-now').on('click', function () {
+        $(this).html('Pay Processing....');
+        $(this).attr('disabled');
+        $location.search(
+            'id=details_receipt&selectItem=' + c.data.selectItem + ','+ desVal
+        );
+    });
+
+    $rootScope.$on('data_table.click', function (event, obj) {
+        console.log(obj);
+        var link = {};
+        link.sys_id = obj.sys_id;
+        link.table = obj.table;
+        link.id = c.data.page;
+        $location.search(link);
+    });
+};
+]]></client_script>
+        <controller_as>c</controller_as>
+        <css>
+
+/* Header bar */
+.header-bar {
+    height: 84px;
+    background-color: #FFFFFF;
+}
+
+.header-bar .container {
+    height: 84px;
+}
+
+.header-bar .container .main-logo {
+    margin-left: -25px;
+}
+
+.header-bar .container .navbar {
+    margin-top: 20px;
+    background-color: transparent;
+    position: relative;
+}
+
+.header-bar .container .navbar .navbar-text {
+    color: black;
+}
+
+.custom-toggler.navbar-toggler:focus {
+    border: 0;
+    box-shadow: none;
+}
+
+.custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(239, 62, 51, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.menu {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    z-index: 99;
+}
+/* Page_5 SECTION */
+h4{
+    font-weight: bold;
+}
+.bg-pink {
+    background-color: #FFFBFB;
+    border-radius: 24px;
+    padding: 24px 55px;
+}
+
+.invoice-details {
+    /* Application No.: 78011 Proforma Invoice No.: INV0001037 */
+
+    /* font-family: 'Lato'; */
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+
+
+    /* Text/text--secondary */
+    color: #2C323F;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+
+}
+
+.invoice-details p {
+    margin-bottom: 0px;
+}
+
+
+.invoice-item {
+    border: 1px solid #dee2e6;
+    /* Bootstrap's border color for consistency */
+    border-left: 5px solid #A80F05;
+    /* Thick red border on the left */
+    border-radius: .25rem;
+    /* Bootstrap's default border-radius */
+    padding: 16px;
+    /* Padding inside the container */
+    margin-bottom: 1rem;
+    /* Space after the item */
+    background-color: #FFFFFF;
+}
+
+.invoice-title {
+    /* Application for Certificate of Statutory Completion */
+
+    /* font-family: 'Lato'; */
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+
+    /* Text/text--primary */
+    color: #151920;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.invoice-price {
+
+    /* $1,420.00 */
+
+    width: 100px;
+    height: 22px;
+
+    /* font-family: 'Lato'; */
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height */
+    text-align: right;
+
+    /* Text/text--primary */
+    color: #151920;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+/* Clears float */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Adjusts the spacing to match the provided design */
+.invoice-item-details {
+    margin-top: 8px;
+    /* Space between title/price line and details */
+}
+
+.list-unstyled {
+    height: 700px;
+    overflow-y: auto;
+}
+.justify-content-between {
+    justify-content: space-between !important;
+}
+.justify-content-end {
+    justify-content: flex-end !important;
+}
+.d-flex {
+    display: flex !important;
+}
+.mb-3 {
+    margin-bottom: 1rem !important;
+}
+.payment-method-text {
+    /* Payment Methods */
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+    /* or 100% */
+    font-feature-settings: 'tnum' on, 'lnum' on;
+
+    color: #585858;
+    margin-top: 82px;
+
+}
+.custom-radio {
+    padding-left: 0;
+    margin-bottom: 3rem !important;
+}
+
+/* Custom radio button style */
+.custom-radio .form-check-input {
+    opacity: 0;
+    position: fixed;
+    width: 0;
+}
+
+.custom-radio .form-check-label {
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+}
+
+.custom-radio .form-check-label:before,
+.custom-radio .form-check-label:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    border-radius: 50%;
+    transform: translateY(-115%);
+}
+
+/* Outer circle */
+.custom-radio .form-check-label:before {
+    width: 18px;
+    height: 18px;
+    background: #fff;
+    border: 2px solid #adb5bd;
+}
+
+/* Inner circle */
+.custom-radio .form-check-label:after {
+    width: 18px;
+    height: 18px;
+    background: red;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+/* Show inner circle when checked */
+.custom-radio .form-check-input:checked~.form-check-label:after {
+    opacity: 1;
+}
+
+.btn-customize {
+    background-color: #E2322F;
+    border: none;
+}
+
+.btn-customize:hover {
+    background-color: #ff0400;
+}
+
+/* FOOTER */
+.footer {
+    background-color: #FFFFFF;
+    color: black;
+    
+}
+
+.footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 2px solid #E2322F;
+    padding: 34px 0;
+}
+
+.footer .container h3 {
+    margin-bottom: 34px;
+    margin-left: 50px;
+}
+
+.footer hr {
+    border-top: 1px solid #707070;
+    width: 100%;
+    margin: 0;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 18px 0;
+    width: 100%;
+}
+
+.footer-links li {
+    padding: 0 12px;
+}
+
+.footer-links a {
+    color: black;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #495057;
+}
+
+
+.social-icons {
+    font-size: 20px;
+    margin-right: 68px;
+    border-left: 1px solid #707070;
+    /* To match the space between Contact us and Feedback */
+}
+
+.border-left {
+    border-left: 1px solid #707070;
+}
+
+.social-icons a {
+    color: black;
+    margin: 0 20px;
+}
+
+.copy-text {
+    font-size: 14px;
+    text-align: right;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.text-start .w-100{
+    text-align: left !important;
+}
+.well{
+	overflow: hidden;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>payment_summary</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>Payment Summary</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+    //Listen sys_id from bill_dashboard_page
+    data.selectItem = $sp.getParameter('selectItem');
+    var listID = {};
+    if (data.selectItem) {
+        listID = data.selectItem.split(',');
+    } else {
+        listID = ['Paid'];
+    }
+    // Sum payment amount
+    var sum = new global.GlideQuery('x_24380_financia_0_invoices')
+        .where("sys_id", "IN", listID)
+        .sum('amount')
+        .orElse(0);
+    //Convert to Dollar
+    var currencyCode = 'USD';
+    var formatString = '%s%v';
+    var exchangeValue = new sn_currency.GlideCurrencyFormatter(formatString);
+    data.sum = exchangeValue.setMaxFractionDigits(2).format(sum, currencyCode);
+    //create an array to populate with invoices
+    data.payments = [];
+    var paymentGR = new GlideRecord('x_24380_financia_0_invoices');
+    paymentGR.addQuery("sys_id", "IN", listID);
+    paymentGR.query();
+    while (paymentGR.next()) {
+        var paymentObj = {};
+        data.count = paymentGR.getRowCount();
+        //use service portal helper method to get some display values
+        $sp.getRecordDisplayValues(
+            paymentObj,
+            paymentGR,
+            'e_service_name,number,application_no,amount,sum'
+        );
+        //get value from fields in table Invoices.
+        paymentObj.e_service_name = paymentGR.getDisplayValue('e_service_name');
+        paymentObj.number = paymentGR.getDisplayValue('number');
+        paymentObj.application_no = paymentGR.getDisplayValue('application_no');
+        paymentObj.amount = paymentGR.getDisplayValue('amount');
+        //push the populated obj into the array
+        data.payments.push(paymentObj);
+        paymentGR.status = 'Paid';
+        paymentGR.update();
+    }
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-02 09:25:53</sys_created_on>
+        <sys_id>ef00f92b47b9021035f04e0f016d43ee</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_name>Payment Summary</sys_name>
+        <sys_package display_value="Financial App" source="x_24380_financia_0">37fd71f647b5ca5035f04e0f016d438e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial App">37fd71f647b5ca5035f04e0f016d438e</sys_scope>
+        <sys_update_name>sp_widget_ef00f92b47b9021035f04e0f016d43ee</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-09 06:27:30</sys_updated_on>
+        <template><![CDATA[<div class="container my-5 p-4">
+        <!-- Payment Summary Section -->
+        <div class="row">
+            <div class="col-md-6 bg-pink">
+                <h3>Payment Summary</h3>
+                <div class="d-flex justify-content-between mt-4">
+                    <h5 class="card-title">Total of {{data.count}} Proforma Invoices</h5>
+                    <h4>{{data.sum}}</h4>
+                </div>
+                <ul class="list-unstyled">
+                    <li class="my-2">
+                        <div class="mt-3">
+                            <div class="invoice-item" ng-repeat="payment in data.payments">
+                                <div class="d-flex justify-content-between">
+                                    <div>
+                                        <div class="invoice-title">{{payment.e_service_name}}
+                                        </div>
+                                        <div class="invoice-details">
+                                            <p>Application No.: {{payment.application_no}}</p>
+                                            <p>Proforma Invoice No.: {{payment.number}}</p>
+                                        </div>
+                                    </div>
+                                    <div class="invoice-price">{{payment.amount}}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Payment Methods Section -->
+            <div class="col-md-6">
+                <!-- Payment Methods Section -->
+                <div class="mb-3">
+                    <p class="payment-method-text mb-5">Payment Methods</p>
+                    <div class="">
+                            <!-- Payment Methods Radio Buttons -->
+                            <form id="paymentForm">
+                                <div class="mb-5 form-check custom-radio">
+                                    <input class="form-check-input" type="radio" name="paymentMethod" id="creditCard"
+                                        value="creditCard">
+                                    <label class="form-check-label w-100" for="creditCard">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                Credit/Debit Cards<br>
+                                                <small>Pay with your Credit / Debit Card</small>
+                                            </div>
+                                            <div>
+                                                <img src="visa.svg" alt="visa">
+                                                <img src="american_express.svg" alt="american">
+                                                <img src="maestro.svg" alt="maestro">
+                                            </div>
+
+                                        </div>
+                                    </label>
+                                </div>
+
+                                <div class="mb-5 form-check custom-radio">
+                                    <input class="form-check-input" type="radio" name="paymentMethod" id="payNow"
+                                        value="payNow">
+                                    <label class="form-check-label" for="payNow">
+                                        PayNow QR Code<br>
+                                        <small>Make payment through scanning the PayNow QR Code</small>
+                                    </label>
+                                </div>
+
+                                <div class="mb-5 form-check custom-radio">
+                                    <input class="form-check-input" type="radio" name="paymentMethod" id="directDebit"
+                                        value="directDebit">
+                                    <label class="form-check-label" for="directDebit">
+                                        Direct Debit Authorisation (DDA)<br>
+                                        <small>Make payment directly through bank account.</small>
+                                    </label>
+                                </div>
+
+                                <!-- Payment Description Input -->
+                                <div class="mb-3 mt-5 mb-5">
+                                    <label for="paymentDescription" class="form-label">Payment Description*</label>
+                                    <input type="text" class="form-control" id="paymentDescription" ng-model="short_description" placeholder="Payment For AABB Project">
+                                </div>
+
+                                <!-- Pay Button -->
+                                <div class="d-flex justify-content-end">
+                                    <button type="button" class="btn btn-primary btn-customize" id="payButton" ng-click="c.action()">Pay {{data.sum}}</button>
+                                </div>
+                            </form>
+                    </div>
+                </div>
+                <!-- End of Payment Methods Section -->
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <h3 class="text-start w-100">Building and Construction Authority</h3>
+            <hr class="dropdown-divider">
+
+            <ul class="footer-links d-flex flex-row justify-content-end align-items-center flex-wrap">
+                <li><a href="javascript:void(0)" class="text-dark">Contact us</a></li>
+                <li><a href="javascript:void(0)" class="text-dark">Feedback</a></li>
+                <li>
+                    <div class="social-icons">
+                        <a href="javascript:void(0)" class="text-dark"><i class="bi bi-facebook"></i></a>
+                        <a href="javascript:void(0)" class="text-dark"><i class="bi bi-twitter"></i></a>
+                        <a href="javascript:void(0)" class="text-dark"><i class="bi bi-linkedin"></i></a>
+                        <a href="javascript:void(0)" class="text-dark"><i class="bi bi-youtube"></i></a>
+                        <a href="javascript:void(0)" class="text-dark"><i class="bi bi-send"></i></a>
+                    </div>
+                </li>
+            </ul>
+
+            <hr class="dropdown-divider">
+
+            <ul class="footer-links d-flex flex-row justify-content-start align-items-center flex-wrap">
+                <li><a href="javascript:void(0)" class="text-dark">Report Vulnerability</a></li>
+                <li class="border-left"><a href="javascript:void(0)" class="text-dark">Privacy Statement</a></li>
+                <li class="border-left"><a href="javascript:void(0)" class="text-dark">Terms of Use</a></li>
+                <li class="border-left"><a href="javascript:void(0)" class="text-dark">Sitemap</a></li>
+                <li class="border-left"><a href="javascript:void(0)" class="text-dark">Site Requirements</a></li>
+            </ul>
+
+            <p class="copy-text w-100 text-end">
+                Copyright &copy; 2023 Government of Singapore<br>
+                Last Updated 27 Oct 2022
+            </p>
+        </div>
+    </footer>
+<!-- Modal Payment ---->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Payment Information</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div id="paycredit">
+          <form action="#">
+          
+            <div class="container-fluid grid">
+          
+              <div class="row pull-center">
+                <div class="col-md-12">
+          
+                  <div class="well">
+          
+                    <div class="row card">
+                    </div>
+          
+                    <br/>
+          
+                    <div class="row-fluid">
+                      <div class="col-md-8">
+                        <div class="form-group">
+                          <label>Credit Card Number </label>
+                          <input type="text" name="number" class="form-control" />
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <label>Expiration</label>
+          
+                          <input type="text" placeholder="MM/YY" name="expiry" class="form-control" />
+          
+                        </div>
+                      </div>
+                    </div>
+          
+                    <div class="row-fluid">
+                      <div class="col-md-8">
+                        <div class="form-group">
+                          <label>Name</label>
+                          <input type="text" name="name" class="form-control" />
+                        </div>
+                      </div>
+          
+                      <div class="col-md-4">
+                        <div class="form-group">
+          
+                          <label>CVV </label>
+          
+                          <input type="text" name="cvv" class="form-control" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div id="payqr" style="text-align: center;">
+          <img src="qrcode_bca.png" width="500"/>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" id="pay-cedit-now" class="btn btn-primary">Pay Now</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>]]></template>
+    </sp_widget>
+</record_update>
